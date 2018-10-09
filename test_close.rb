@@ -89,4 +89,9 @@ class My_test < Minitest::Test
         bash_numbers =["123456789123456789"]
         assert_equal(4, numbers_off_by_how_many(my_number, bash_numbers))
     end
+    def test_how_many_different_again
+        my_number = "1234567"
+        bash_numbers =["1234555"]
+        assert_equal(7, numbers_off_by_how_many(my_number, bash_numbers))
+    end
 end
