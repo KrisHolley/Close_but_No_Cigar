@@ -60,4 +60,33 @@ class My_test < Minitest::Test
         assert_equal(["1134", "3234", "4234", "1334", "1231"], winning_tickets_off_by_one(my_number, bash_numbers))
     end
 
+    def test_bash_seven
+        my_number = "1234"
+        bash_numbers = ["1233"]
+        assert_equal(false, off_by_one_number(my_number, bash_numbers))
+    end
+
+    def test_how_many_different
+        my_number = "1234567"
+        bash_numbers = ["1234566"]
+        assert_equal(7, numbers_off_by_how_many(my_number, bash_numbers))
+    end
+
+    def test_how_many_off
+        my_number = "123456"
+        bash_numbers = ["123456789"]
+        assert_equal(6, numbers_off_by_how_many(my_number, bash_numbers))
+    end
+
+    def test_how_many_different
+        my_number = "123456789"
+        bash_numbers = ["1234"]
+        assert_equal(9, numbers_off_by_how_many(my_number, bash_numbers))
+    end
+
+    def test_how_many_different_off
+        my_number = "1234"
+        bash_numbers =["123456789123456789"]
+        assert_equal(4, numbers_off_by_how_many(my_number, bash_numbers))
+    end
 end

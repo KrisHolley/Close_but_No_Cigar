@@ -25,4 +25,19 @@ def winning_tickets_off_by_one(my_number, bash_numbers)
     end
     return matches
 end
-p winning_tickets_off_by_one("1234", ["1333", "1233", "3322"])
+# p winning_tickets_off_by_one("1234", ["1333", "1233", "3322"])
+
+def numbers_off_by_how_many(my_number, bash_numbers)
+    x = 0
+    count = 0
+    my_number.length.times do
+      if bash_numbers[x] != my_number[x]
+        count += 1
+      end
+    x += 1
+    puts count
+end
+    return count
+end
+
+numbers_off_by_how_many("1234", "1235")
