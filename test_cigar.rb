@@ -15,7 +15,7 @@ class My_test < Minitest::Test
 	def test_two
 		my_number = "1234"
 		bash_numbers = ["1233", "1244", "1255", "1234"]
-		assert_equal([], grand_bash(my_number, bash_numbers))
+		assert_equal(["1234"], grand_bash(my_number, bash_numbers))
 	end
 
 	def test_three
@@ -27,7 +27,7 @@ class My_test < Minitest::Test
 	def test_four
 		my_number = "1234"
 		bash_numbers = ["1233","1331","1432","1234"]
-		assert_equal([], grand_bash(my_number, bash_numbers))
+		assert_equal(["1234"], grand_bash(my_number, bash_numbers))
 	end
 
 	def test_five
@@ -39,12 +39,12 @@ class My_test < Minitest::Test
 	def test_six
 		my_number = "1234"
 		bash_numbers = ["1222", "1345", "1234", "8543"]
-		assert_equal([], grand_bash(my_number, bash_numbers))
+		assert_equal(["1234"], grand_bash(my_number, bash_numbers))
 	end
 
 	def test_seven
 		my_number ="1234"
-		bash_numbers ["1232", "4321","2341", "3214"]
+		bash_numbers = ["1232", "4321","2341", "3214"]
 		assert_equal([], grand_bash(my_number, bash_numbers))
 	end
 

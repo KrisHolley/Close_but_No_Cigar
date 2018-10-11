@@ -68,30 +68,30 @@ class My_test < Minitest::Test
 
     def test_how_many_different
         my_number = "1234567"
-        bash_numbers = ["1234566"]
-        assert_equal(7, numbers_off_by_how_many(my_number, bash_numbers))
+        bash_numbers = "1234566"
+        assert_equal(1, numbers_off_by_how_many(my_number, bash_numbers))
     end
 
     def test_how_many_off
         my_number = "123456"
-        bash_numbers = ["123456789"]
-        assert_equal(6, numbers_off_by_how_many(my_number, bash_numbers))
+        bash_numbers = "123456789"
+        assert_equal(0, numbers_off_by_how_many(my_number, bash_numbers))
     end
 
     def test_how_many_different
         my_number = "123456789"
-        bash_numbers = ["1234"]
-        assert_equal(9, numbers_off_by_how_many(my_number, bash_numbers))
+        bash_numbers = "1234"
+        assert_equal(5, numbers_off_by_how_many(my_number, bash_numbers))
     end
 
     def test_how_many_different_off
         my_number = "1234"
-        bash_numbers =["123456789123456789"]
-        assert_equal(4, numbers_off_by_how_many(my_number, bash_numbers))
+        bash_numbers ="123456789123456789"
+        assert_equal(0, numbers_off_by_how_many(my_number, bash_numbers))
     end
     def test_how_many_different_again
         my_number = "1234567"
-        bash_numbers =["1234555"]
-        assert_equal(7, numbers_off_by_how_many(my_number, bash_numbers))
+        bash_numbers ="1234555"
+        assert_equal(2, numbers_off_by_how_many(my_number, bash_numbers))
     end
 end
